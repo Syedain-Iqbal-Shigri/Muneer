@@ -1,35 +1,43 @@
-<!doctype html>
-<html lang="en" data-bs-theme="light">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="GB Muneer — Web Developer. Portfolio showcasing projects, skills and contact details." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GB Muneer — Web Developer. Portfolio showcasing projects, skills and contact details.">
   <meta name="keywords" content="Web Developer, Frontend Developer, HTML, CSS, Bootstrap, Portfolio, GB Muneer">
   <meta name="author" content="GB Muneer">
+  <meta name="robots" content="index, follow">
   
-  <!-- Open Graph for social sharing -->
+  <!-- Open Graph -->
   <meta property="og:title" content="GB Muneer — Web Developer">
   <meta property="og:description" content="Portfolio showcasing projects, skills and contact details.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?w=1200&h=630&fit=crop">
   
-  <title>GB Muneer — Web Developer</title>
-
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Google Fonts - Poppins for modern look -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GB Muneer — Web Developer">
+  <meta name="twitter:description" content="Portfolio showcasing projects, skills and contact details.">
+  
+  <title>Muneer - Web Developer</title>
+  
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="./img/WhatsApp Image 2025-09-25 at 14.28.28.jpeg">
+  
+  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  
   <style>
     /* ==========================================
-       CSS CUSTOM PROPERTIES (Variables)
-       Easy to change colors in one place!
+       CSS VARIABLES
        ========================================== */
     :root {
       --pearl: #f8f7f4;
@@ -93,7 +101,6 @@
       border-radius: 10px;
     }
 
-    /* Selection color */
     ::selection {
       background: var(--primary);
       color: white;
@@ -168,7 +175,7 @@
        NAVBAR
        ========================================== */
     .navbar {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -198,14 +205,9 @@
       margin: 0 0.2rem;
       border-radius: var(--radius-sm);
       transition: var(--transition);
-      position: relative;
     }
 
-    .nav-link:hover {
-      color: var(--primary) !important;
-      background: rgba(99, 102, 241, 0.08);
-    }
-
+    .nav-link:hover,
     .nav-link.active {
       color: var(--primary) !important;
       background: rgba(99, 102, 241, 0.1);
@@ -221,7 +223,6 @@
       outline: 2px solid var(--primary);
     }
 
-    /* Mobile navbar */
     @media (max-width: 991px) {
       .navbar-collapse {
         background: white;
@@ -251,6 +252,7 @@
     .btn-primary:hover {
       transform: translateY(-3px);
       box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
     }
 
     .btn-outline-primary {
@@ -266,16 +268,16 @@
       transform: translateY(-3px);
     }
 
-    .btn-outline-dark {
-      border: 2px solid var(--dark);
-      color: var(--dark);
+    .btn-outline-light {
+      border: 2px solid rgba(255,255,255,0.5);
+      color: white;
       background: transparent;
     }
 
-    .btn-outline-dark:hover {
-      background: var(--dark);
-      border-color: var(--dark);
-      color: white;
+    .btn-outline-light:hover {
+      background: white;
+      border-color: white;
+      color: var(--dark);
     }
 
     /* ==========================================
@@ -286,12 +288,11 @@
       display: flex;
       align-items: center;
       position: relative;
-      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(99, 102, 241, 0.4)),
-                  url('./img/WhatsApp Image 2025-09-25 at 14.28.28.jpeg') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(99, 102, 241, 0.5)),
+                  url('https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1920&q=80') center/cover no-repeat;
       overflow: hidden;
     }
 
-    /* Animated background shapes */
     .hero-shapes {
       position: absolute;
       width: 100%;
@@ -313,7 +314,6 @@
       background: var(--primary);
       top: 10%;
       right: -100px;
-      animation-delay: 0s;
     }
 
     .shape-2 {
@@ -438,8 +438,8 @@
     }
 
     .hero-image {
-      width: 350px;
-      height: 350px;
+      width: 320px;
+      height: 320px;
       object-fit: cover;
       border-radius: 50%;
       border: 5px solid rgba(255,255,255,0.2);
@@ -476,7 +476,7 @@
 
     .about-image {
       width: 100%;
-      max-width: 400px;
+      max-width: 380px;
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-lg);
       transition: var(--transition);
@@ -490,6 +490,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
+      max-width: 380px;
       border: 4px solid var(--primary);
       border-radius: var(--radius-lg);
       top: 20px;
@@ -530,6 +531,7 @@
       color: white;
       border-radius: var(--radius-sm);
       font-size: 1.2rem;
+      flex-shrink: 0;
     }
 
     .info-content .label {
@@ -607,7 +609,7 @@
 
     .tools-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
       gap: 1rem;
     }
 
@@ -616,7 +618,7 @@
       flex-direction: column;
       align-items: center;
       gap: 0.5rem;
-      padding: 1.5rem 1rem;
+      padding: 1.25rem 1rem;
       background: white;
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-sm);
@@ -629,7 +631,7 @@
     }
 
     .tool-item i {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: var(--primary);
     }
 
@@ -640,7 +642,7 @@
     }
 
     /* ==========================================
-       SERVICES SECTION (NEW!)
+       SERVICES SECTION
        ========================================== */
     .services-section {
       padding: 100px 0;
@@ -756,6 +758,7 @@
       color: var(--dark);
       border-radius: 50%;
       transition: var(--transition);
+      text-decoration: none;
     }
 
     .project-link:hover {
@@ -816,7 +819,7 @@
     }
 
     /* ==========================================
-       TESTIMONIALS SECTION (NEW!)
+       TESTIMONIALS SECTION
        ========================================== */
     .testimonials-section {
       padding: 100px 0;
@@ -930,6 +933,7 @@
       background: rgba(255,255,255,0.15);
       border-radius: var(--radius-sm);
       font-size: 1.2rem;
+      flex-shrink: 0;
     }
 
     .contact-text .label {
@@ -959,6 +963,7 @@
       color: white;
       font-size: 1.2rem;
       transition: var(--transition);
+      text-decoration: none;
     }
 
     .social-link:hover {
@@ -1039,6 +1044,7 @@
     .footer-links {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     .footer-links li {
@@ -1047,6 +1053,7 @@
 
     .footer-links a {
       color: rgba(255,255,255,0.7);
+      text-decoration: none;
       transition: var(--transition);
     }
 
@@ -1101,7 +1108,7 @@
     }
 
     /* ==========================================
-       MODAL IMPROVEMENTS
+       MODAL STYLES
        ========================================== */
     .modal-content {
       border: none;
@@ -1153,12 +1160,12 @@
        ========================================== */
     @media (max-width: 991px) {
       .hero-image {
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 260px;
       }
       
       .about-image {
-        max-width: 300px;
+        max-width: 280px;
         margin-bottom: 2rem;
       }
       
@@ -1244,7 +1251,6 @@
        HERO SECTION
        ========================================== -->
   <header id="home" class="pt-5">
-    <!-- Animated Background Shapes -->
     <div class="hero-shapes" aria-hidden="true">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
@@ -1255,26 +1261,22 @@
       <div class="row align-items-center min-vh-100 py-5">
         <div class="col-lg-7">
           <div class="hero-content">
-            <!-- Availability Badge -->
             <div class="hero-badge">
               <span class="dot"></span>
               Available for freelance work
             </div>
 
-            <!-- Main Title -->
             <h1 class="hero-title">
               <span class="wave">👋</span> Hi, I'm<br>
-              <span class="text-gradient">GB Muneer</span>
+              <span class="text-gradient">Muneer</span>
             </h1>
 
-            <!-- Subtitle -->
             <p class="hero-subtitle">
               A passionate <strong>Web Developer</strong> crafting beautiful, responsive, 
               and user-friendly digital experiences. I transform ideas into elegant, 
               functional websites.
             </p>
 
-            <!-- CTA Buttons -->
             <div class="hero-buttons">
               <a href="#projects" class="btn btn-primary btn-lg">
                 <i class="bi bi-folder me-2"></i>View My Work
@@ -1284,7 +1286,6 @@
               </a>
             </div>
 
-            <!-- Stats -->
             <div class="hero-stats mt-4">
               <div class="stat-item">
                 <div class="stat-number">3+</div>
@@ -1304,7 +1305,12 @@
 
         <div class="col-lg-5 d-flex justify-content-center mt-5 mt-lg-0">
           <div class="hero-image-wrapper">
-            <img src="./img/Gemini_Generated_Image_ndpx5fndpx5fndpx.png" alt="Portrait of GB Muneer" class="hero-image" loading="lazy">
+            <img src="./img/WhatsApp Image 2025-09-25 at 14.28.28.jpeg" 
+                 alt="Portrait of GB Muneer" 
+                 class="hero-image" 
+                 loading="lazy"
+                 width="320"
+                 height="320">
             <div class="hero-image-decoration" aria-hidden="true"></div>
           </div>
         </div>
@@ -1318,15 +1324,18 @@
   <section id="about" class="about-section">
     <div class="container">
       <div class="row g-5 align-items-center">
-        <!-- Image Column -->
         <div class="col-lg-5 text-center">
           <div class="about-image-wrapper">
-            <img src="./img/Gemini_Generated_Image_ndpx5fndpx5fndpx.png" alt="GB Muneer - Web Developer" class="about-image" loading="lazy">
+            <img src="./img/WhatsApp Image 2025-09-25 at 14.28.28.jpeg" 
+                 alt="GB Muneer - Web Developer" 
+                 class="about-image" 
+                 loading="lazy"
+                 width="380"
+                 height="380">
             <div class="about-image-frame" aria-hidden="true"></div>
           </div>
         </div>
 
-        <!-- Content Column -->
         <div class="col-lg-7">
           <span class="section-title">About Me</span>
           <p class="section-subtitle mt-4 mb-4">Get to know the person behind the code</p>
@@ -1337,7 +1346,6 @@
             Bootstrap 5, I bring ideas to life through code.
           </p>
 
-          <!-- Info Cards -->
           <div class="row">
             <div class="col-md-6">
               <div class="info-card">
@@ -1385,7 +1393,6 @@
             </div>
           </div>
 
-          <!-- Skills Badges -->
           <div class="mt-4">
             <h5 class="mb-3">Quick Skills</h5>
             <div class="d-flex flex-wrap gap-2">
@@ -1397,7 +1404,6 @@
             </div>
           </div>
 
-          <!-- Download CV Button -->
           <div class="mt-4">
             <a href="#" class="btn btn-primary">
               <i class="bi bi-download me-2"></i>Download CV
@@ -1409,7 +1415,7 @@
   </section>
 
   <!-- ==========================================
-       SKILLS SECTION (NEW!)
+       SKILLS SECTION
        ========================================== -->
   <section id="skills" class="skills-section">
     <div class="container">
@@ -1419,7 +1425,6 @@
       </div>
 
       <div class="row g-5">
-        <!-- Technical Skills -->
         <div class="col-lg-6">
           <div class="skill-category">
             <h4 class="skill-category-title">
@@ -1478,7 +1483,6 @@
           </div>
         </div>
 
-        <!-- Tools -->
         <div class="col-lg-6">
           <div class="skill-category">
             <h4 class="skill-category-title">
@@ -1521,7 +1525,6 @@
             </div>
           </div>
 
-          <!-- Soft Skills -->
           <div class="skill-category mt-4">
             <h4 class="skill-category-title">
               <i class="bi bi-person-heart"></i> Soft Skills
@@ -1540,7 +1543,7 @@
   </section>
 
   <!-- ==========================================
-       SERVICES SECTION (NEW!)
+       SERVICES SECTION
        ========================================== -->
   <section id="services" class="services-section">
     <div class="container">
@@ -1642,11 +1645,15 @@
       </div>
 
       <div class="row g-4">
-        <!-- Project 1 -->
         <div class="col-md-6 col-lg-4">
           <article class="project-card">
             <div class="project-image-wrapper">
-              <img src="./img/WhatsApp Image 2025-09-25 at 14.28.28.jpeg" class="project-image" alt="Portfolio Website" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" 
+                   class="project-image" 
+                   alt="Portfolio Website" 
+                   loading="lazy"
+                   width="600"
+                   height="400">
               <div class="project-overlay">
                 <div class="project-links">
                   <a href="#" class="project-link" aria-label="View live site">
@@ -1676,11 +1683,15 @@
           </article>
         </div>
 
-        <!-- Project 2 -->
         <div class="col-md-6 col-lg-4">
           <article class="project-card">
             <div class="project-image-wrapper">
-              <img src="./img/download (1).png" class="project-image" alt="E-commerce UI" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" 
+                   class="project-image" 
+                   alt="E-commerce UI" 
+                   loading="lazy"
+                   width="600"
+                   height="400">
               <div class="project-overlay">
                 <div class="project-links">
                   <a href="#" class="project-link" aria-label="View live site">
@@ -1710,11 +1721,15 @@
           </article>
         </div>
 
-        <!-- Project 3 -->
         <div class="col-md-6 col-lg-4">
           <article class="project-card">
             <div class="project-image-wrapper">
-              <img src="./img/videograph-free-template-353x278.jpg.jpeg" class="project-image" alt="Admin Dashboard" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+                   class="project-image" 
+                   alt="Admin Dashboard" 
+                   loading="lazy"
+                   width="600"
+                   height="400">
               <div class="project-overlay">
                 <div class="project-links">
                   <a href="#" class="project-link" aria-label="View live site">
@@ -1748,7 +1763,7 @@
   </section>
 
   <!-- ==========================================
-       TESTIMONIALS SECTION (NEW!)
+       TESTIMONIALS SECTION
        ========================================== -->
   <section id="testimonials" class="testimonials-section">
     <div class="container">
@@ -1768,7 +1783,7 @@
               detail and responsive design skills are impressive!"
             </p>
             <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/100?img=11" alt="Ahmed Khan" class="testimonial-avatar">
+              <img src="https://i.pravatar.cc/100?img=11" alt="Ahmed Khan" class="testimonial-avatar" width="50" height="50">
               <div>
                 <div class="testimonial-name">Ahmed Khan</div>
                 <div class="testimonial-role">Business Owner</div>
@@ -1787,7 +1802,7 @@
               and exceeded our expectations. Highly recommended!"
             </p>
             <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/100?img=32" alt="Sarah Ali" class="testimonial-avatar">
+              <img src="https://i.pravatar.cc/100?img=32" alt="Sarah Ali" class="testimonial-avatar" width="50" height="50">
               <div>
                 <div class="testimonial-name">Sarah Ali</div>
                 <div class="testimonial-role">Designer</div>
@@ -1806,7 +1821,7 @@
               requirements perfectly and delivered exactly what we needed."
             </p>
             <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/100?img=59" alt="Hassan Raza" class="testimonial-avatar">
+              <img src="https://i.pravatar.cc/100?img=59" alt="Hassan Raza" class="testimonial-avatar" width="50" height="50">
               <div>
                 <div class="testimonial-name">Hassan Raza</div>
                 <div class="testimonial-role">Startup Founder</div>
@@ -1830,7 +1845,6 @@
 
       <div class="contact-wrapper">
         <div class="row g-4">
-          <!-- Contact Info -->
           <div class="col-lg-5">
             <div class="contact-info-card">
               <h3 class="contact-info-title">Let's Talk</h3>
@@ -1875,9 +1889,13 @@
             </div>
           </div>
 
-          <!-- Contact Form -->
           <div class="col-lg-7">
-            <form id="contactForm" action="#" method="POST">
+            <form id="contactForm" action="https://formsubmit.co/muneer786@gmail.com" method="POST">
+              <!-- FormSubmit configuration -->
+              <input type="hidden" name="_subject" value="New Contact Form Submission - GB Muneer Portfolio">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -1949,8 +1967,9 @@
         <div class="col-lg-4">
           <h5 class="footer-title">Newsletter</h5>
           <p>Subscribe to get updates on my latest projects and tips.</p>
-          <form class="d-flex gap-2">
-            <input type="email" class="form-control" placeholder="Your email" style="flex:1">
+          <form class="d-flex gap-2" action="https://formsubmit.co/muneer786@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Newsletter Subscription">
+            <input type="email" class="form-control" name="email" placeholder="Your email" required style="flex:1">
             <button class="btn btn-primary" type="submit">
               <i class="bi bi-send"></i>
             </button>
@@ -1967,9 +1986,7 @@
     </div>
   </footer>
 
-  <!-- ==========================================
-       SCROLL TO TOP BUTTON
-       ========================================== -->
+  <!-- Scroll to Top Button -->
   <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
     <i class="bi bi-arrow-up"></i>
   </button>
@@ -1985,7 +2002,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img src="./IMG/grid.jpg" class="img-fluid rounded mb-4" alt="Portfolio screenshot" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" 
+               class="img-fluid rounded mb-4" 
+               alt="Portfolio screenshot" 
+               loading="lazy">
           <h5>Project Overview</h5>
           <p>A modern, responsive portfolio website built with Bootstrap 5. Features include smooth animations, accessible design, and optimized performance.</p>
           
@@ -2021,6 +2041,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop" 
+               class="img-fluid rounded mb-4" 
+               alt="E-commerce screenshot" 
+               loading="lazy">
           <h5>Project Overview</h5>
           <p>A clean and intuitive e-commerce user interface designed for optimal shopping experience. Features product cards, shopping cart, and checkout flow.</p>
           
@@ -2054,6 +2078,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" 
+               class="img-fluid rounded mb-4" 
+               alt="Dashboard screenshot" 
+               loading="lazy">
           <h5>Project Overview</h5>
           <p>A professional admin dashboard featuring data visualization, analytics panels, and user management with responsive sidebar navigation.</p>
           
@@ -2079,21 +2107,14 @@
     </div>
   </div>
 
-  <!-- ==========================================
-       JAVASCRIPT
-       ========================================== -->
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
   <script>
-    // ==========================================
     // Set Current Year
-    // ==========================================
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // ==========================================
     // Navbar Scroll Effect
-    // ==========================================
     const navbar = document.getElementById('mainNavbar');
     
     window.addEventListener('scroll', () => {
@@ -2104,9 +2125,7 @@
       }
     });
 
-    // ==========================================
     // Smooth Scroll for Internal Links
-    // ==========================================
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -2125,9 +2144,7 @@
       });
     });
 
-    // ==========================================
     // Active Nav Link on Scroll
-    // ==========================================
     const sections = document.querySelectorAll('section, header');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -2150,9 +2167,7 @@
       if (section.id) observer.observe(section);
     });
 
-    // ==========================================
     // Skill Progress Bar Animation
-    // ==========================================
     const skillBars = document.querySelectorAll('.skill-progress');
 
     const skillObserver = new IntersectionObserver((entries) => {
@@ -2166,9 +2181,7 @@
 
     skillBars.forEach(bar => skillObserver.observe(bar));
 
-    // ==========================================
     // Scroll to Top Button
-    // ==========================================
     const scrollTopBtn = document.getElementById('scrollTop');
 
     window.addEventListener('scroll', () => {
@@ -2183,9 +2196,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // ==========================================
     // Fade In Animation on Scroll
-    // ==========================================
     const fadeElements = document.querySelectorAll('.project-card, .service-card, .testimonial-card, .tool-item');
 
     const fadeObserver = new IntersectionObserver((entries) => {
@@ -2204,25 +2215,6 @@
       el.style.transform = 'translateY(30px)';
       el.style.transition = 'all 0.6s ease';
       fadeObserver.observe(el);
-    });
-
-    // ==========================================
-    // Form Submission (Demo)
-    // ==========================================
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(this);
-      const name = formData.get('name');
-      
-      // Show success message (in real project, send to server)
-      alert(`Thank you ${name}! Your message has been received. I'll get back to you soon!`);
-      
-      // Reset form
-      this.reset();
     });
   </script>
 </body>
